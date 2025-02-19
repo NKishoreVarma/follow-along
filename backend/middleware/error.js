@@ -1,6 +1,3 @@
-const Errorhadler=require("../utils/errorhadler")
-
-
 
 module.exports=(err,req,res,next)=>{
   err.statusCode=err.statusCode ||500
