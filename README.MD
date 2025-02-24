@@ -228,3 +228,27 @@ The form includes fields for essential product details such as *name, descriptio
 To ensure data accuracy, the form implements *validation rules*, requiring users to input necessary information and upload images in supported formats. The ability to preview images before submission further improves user experience by allowing verification of uploaded files.  
 
 By integrating multiple image uploads, this form enhances the way products are displayed, helping businesses and sellers showcase their items more effectively. It is designed with *simplicity and efficiency* in mind, making product management seamless and convenient.
+Milestone 10: Product Schema & API Endpoint
+
+Overview
+
+Defined Product Schema using Mongoose and implemented a POST API endpoint.
+
+Key Achievements
+
+Product Schema (Mongoose):
+const productSchema = new mongoose.Schema({ name: { type: String, required: true }, description: { type: String, required: true }, tags: { type: [String], required: true }, price: { type: Number, required: true }, stock: { type: Number, required: true }, category: { type: String, required: true }, images: { type: [String], required: true }, email: { type: String, required: true, match: [/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/, 'Please enter a valid email address'] } }, { timestamps: true });
+
+2. **API Endpoint (`/api/products`)**
+- Validates and stores product details in **MongoDB**.
+- Ensures **data integrity & validation**.
+
+### **Technologies Used**
+- **Node.js & Express.js**
+- **MongoDB Atlas & Mongoose**
+- **Multer (for file uploads)**
+
+---
+
+## **Conclusion**
+This e-commerce project follows a structured milestone-based approach, ensuring a **scalable, secure, and fully functional** web application.
